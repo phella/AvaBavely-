@@ -1,25 +1,23 @@
 ul {
     list-style-type:none;
     text-align:center;
+    z-index: 10;
 }
 
 li {
     display:inline-block;
 }
 li a{
-    margin:30px;
+    margin:25px;
     font-size:1.5rem;
     font-weight: 400;
     color:white;
     text-decoration: none;
 }
-
-div {
-    display:inline;
-}
 nav {
     position: fixed;
     width:100%;
+    z-index:99;
 }
 body {
     padding:0px;
@@ -27,6 +25,11 @@ body {
 }
 img {
     max-height: 600px;
+}
+
+.container {
+    position: relative;
+    text-align: center;
 }
 
 .first {
@@ -48,19 +51,17 @@ img {
     font-weight: 400;
     transform: translate(20%,-40%);
     animation: show 3s 1;
+    padding-top: 30px;
 }
 
 @keyframes pop {
     0%{
-        margin-bottom:-40px;
     }
     30%{
-        margin-bottom:-40px;
         letter-spacing: 8px;
     }
     85%{
         letter-spacing:1px;
-        margin-bottom:-40px;
     }
 }
 
