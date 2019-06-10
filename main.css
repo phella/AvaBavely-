@@ -28,3 +28,48 @@ body {
 img {
     max-height: 600px;
 }
+
+.first {
+    position: absolute;
+    top:50%;
+    font-size:40px;
+    color:whitesmoke;
+    font-weight: 400;
+    letter-spacing: 1px;
+    transform: translate(20%, -50%);
+    animation: pop 3s 1 ;
+}
+
+.second{
+    position: absolute;
+    top:55%;
+    font-size:40px;
+    color:whitesmoke;
+    font-weight: 400;
+    transform: translate(20%,-40%);
+    animation: show 3s 1;
+}
+
+@keyframes pop {
+    0%{
+        margin-bottom:-40px;
+    }
+    30%{
+        margin-bottom:-40px;
+        letter-spacing: 8px;
+    }
+    85%{
+        letter-spacing:1px;
+        margin-bottom:-40px;
+    }
+}
+
+@keyframes show {
+    0%{
+        visibility: hidden;
+    }
+    80%{
+        visibility: hidden;
+        transform: translate(20%,-20%);
+    }
+}
