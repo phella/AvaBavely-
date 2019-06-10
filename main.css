@@ -18,6 +18,7 @@ nav {
     position: fixed;
     width:100%;
     z-index:99;
+    border-bottom: 1px outset;
 }
 body {
     padding:0px;
