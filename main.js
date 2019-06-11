@@ -18,7 +18,6 @@ function navColor() {
         for(let i=1;i<4;i++){
             document.getElementById("nav-elements"+i).style.color = "black";
         }
-        document.getElementById("nav-elements3").style.color = "blue";
     } else {
         document.getElementById("nav").style.backgroundColor = "transparent";
         for(let i=1;i<4;i++){
