@@ -85,6 +85,12 @@ h2 {
     font-weight: 900;
 }
 
+h3 {
+    color:black;
+    font-size:30px;
+    margin: 10px;
+}
+
 article {
     display:inline-block;
     width:30%;
@@ -97,10 +103,16 @@ article {
 figure{
     display:inline-block;
     width:50%;
-    margin-left: 5%;
-    float: right;
+    margin-left: 15%;
+    vertical-align: top;
 }
-@media only screen and (max-width: 800px) {
+
+  .hide {
+    margin-top: 150px;
+    opacity: 0;
+  }
+
+  @media only screen and (max-width: 800px) {
     figure {
       width: 100%;
     }
