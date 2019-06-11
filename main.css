@@ -53,20 +53,11 @@ img {
     color:whitesmoke;
     font-weight: 400;
     transform: translate(20%,-40%);
-    animation: show 3s 1;
+    animation: show 2s 1;
     padding-top: 30px;
 }
 
-@keyframes pop {
-    0%{
-    }
-    30%{
-        letter-spacing: 8px;
-    }
-    85%{
-        letter-spacing:1px;
-    }
-}
+
 
 @keyframes show {
     0%{
@@ -123,7 +114,13 @@ figure{
     }
   }
 
-
-  #maps{
-      
+  #socialMedia {
+      background-image: url("assets/back1.svg");
+  }
+  #fb {
+      background-image: url("assets/fb.svg");
+      height: 130px;
+      width: 130px;
+      margin-left: 30%;
+      cursor: pointer;
   }
