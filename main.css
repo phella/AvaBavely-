@@ -117,10 +117,46 @@ figure{
   #socialMedia {
       background-image: url("assets/back1.svg");
   }
+
   #fb {
       background-image: url("assets/fb.svg");
       height: 130px;
       width: 130px;
       margin-left: 30%;
+      display:inline-block;
       cursor: pointer;
   }
+
+  #tweet {
+    background-image: url("assets/tweet1.svg");
+    height: 100px;
+    width: 100px;
+    margin-left: 10%;
+    display: inline-block;
+    cursor: pointer;   
+  }
+
+  @keyframes bounce-1 {
+    0%   { transform: scale(1,1)    translateY(0); }
+        10%  { transform: scale(1.1,.9) translateY(0); }
+        30%  { transform: scale(.9,1.1) translateY(-70px); }
+        50%  { transform: scale(1,1)    translateY(0); }
+        100% { transform: scale(1,1)    translateY(0); }
+}
+
+#fb:hover {
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-name: bounce-1;
+    animation-timing-function: ease;
+    background-image: url("assets/fb1.svg")
+}
+
+#tweet:hover {
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-name: bounce-1;
+    animation-timing-function: ease;
+    background-image: url("assets/tweet2.svg");
+    width:115px;
+}

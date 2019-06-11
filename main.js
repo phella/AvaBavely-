@@ -27,9 +27,9 @@ function navColor() {
 }
 
 function animate() {
-    if(scrollState>320 && scrollState<380) {
+    if(scrollState>320 && scrollState<950) {
         translate(1);
-    }else if (scrollState>380) {
+    }else if (scrollState>950) {
         translate(2);
     }
 }
