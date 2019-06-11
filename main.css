@@ -131,7 +131,7 @@ figure{
     background-image: url("assets/tweet1.svg");
     height: 100px;
     width: 100px;
-    margin-left: 10%;
+    margin-left: 20%;
     display: inline-block;
     cursor: pointer;   
   }
