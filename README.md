@@ -1,3 +1,3 @@
 # AvaBavely-
-One page website using HTML5 , CSS , JavaScript only.
-No FrameWorks or libraries are used.
+One page website using HTML5 , CSS , VanillaJS.
+The website is based on scrolling event.
