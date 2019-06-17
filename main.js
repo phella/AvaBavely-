@@ -47,6 +47,11 @@ function carousal(x) {
         let str2 = str;
         const id =(+str2.slice(-5,-4) + x)%carousalImgNo;
         str2 = id>-1? id: carousalImgNo -1 ;
-        document.getElementById("car"+i).src = str.slice(0,str.length-5)+str2+'.jpg';
+        document.getElementById("car"+i).style.opacity ="0";
+        document.getElementById("car"+i).style.transitionDuration = "0.3s";
+        setTimeout(()=>{
+            document.getElementById("car"+i).style.opacity ="1";
+            document.getElementById("car"+i).src = str.slice(0,str.length-5)+str2+'.jpg';
+        }, 300);
     }
 }
