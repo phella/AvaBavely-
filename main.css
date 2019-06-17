@@ -160,3 +160,33 @@ figure{
     background-image: url("assets/tweet2.svg");
     width:115px;
 }
+
+.grid {
+    width:70%;
+    margin-left: 15%;
+}
+
+.carousal {
+    padding:0px;
+    display:table-cell;
+    width:auto;
+}
+
+.carousal-imgs {
+    display: inline-block;
+    margin:20px;
+}
+
+#carousal-section {
+    text-align: center;
+    margin-top: 60px;
+    display:table;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.arr {
+    vertical-align:middle;
+    display: table-cell;
+    font-size: 30px;
+}

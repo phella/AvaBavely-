@@ -3,10 +3,7 @@ let maxScroll=0;
 function scrolling(){
     scrollState = window.scrollY;
     console.log(scrollState);
-    if(scrollState>maxScroll)
-    {
         animate();
-    }
     if(scrollState > maxScroll){
         maxScroll = scrollState;
     }
