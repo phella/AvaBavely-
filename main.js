@@ -1,3 +1,4 @@
+const carousalImgNo = 3;
 let scrollState;
 let maxScroll=0;
 function scrolling(){
@@ -38,4 +39,14 @@ function translate(i){
     document.getElementById("arti"+i).style.transitionDuration = "2s";
     document.getElementById("arti"+i).style.transform = "translateY(-150px)";
     document.getElementById("arti"+i).style.opacity ="1";
+}
+
+function carousal(x) {
+    for(let i =0 ; i<3 ;i++){
+        let str = document.getElementById("car"+i).src;
+        let str2 = str;
+        const id =(+str2.slice(-5,-4) + x)%carousalImgNo;
+        str2 = id>-1? id: carousalImgNo -1 ;
+        document.getElementById("car"+i).src = str.slice(0,str.length-5)+str2+'.jpg';
+    }
 }

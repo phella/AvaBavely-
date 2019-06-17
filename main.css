@@ -25,7 +25,7 @@ body {
     margin:0px;
 }
 img {
-    max-height: 700px;
+    max-height: 400px;
     display: block;
     width: 100%;
 }
@@ -175,6 +175,7 @@ figure{
 .carousal-imgs {
     display: inline-block;
     margin:20px;
+    cursor: pointer;
 }
 
 #carousal-section {
@@ -189,4 +190,5 @@ figure{
     vertical-align:middle;
     display: table-cell;
     font-size: 30px;
+    cursor: pointer;
 }
