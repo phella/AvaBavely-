@@ -198,3 +198,9 @@ figure{
         display: none;
     }
   }
+
+  .carousal-par{
+        position: absolute;
+        bottom: 55px;
+        right: 35px;
+  }

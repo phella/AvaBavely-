@@ -1,4 +1,5 @@
 const carousalImgNo = 3;
+const descriptions = ['حفله &nbsp; 2','حفله &nbsp; 1','حفله &nbsp; 0'];
 let scrollState;
 let maxScroll=0;
 function scrolling(){
@@ -48,9 +49,13 @@ function carousal(x) {
         const id =(+str2.slice(-5,-4) + x)%carousalImgNo;
         str2 = id>-1? id: carousalImgNo -1 ;
         document.getElementById("car"+i).style.opacity ="0";
+        document.getElementById("des"+i).style.opacity="0" ;
         document.getElementById("car"+i).style.transitionDuration = "0.3s";
+        document.getElementById("des"+i).style.transitionDuration = "0.3s";
         setTimeout(()=>{
             document.getElementById("car"+i).style.opacity ="1";
+            document.getElementById("des"+i).style.opacity ="1";
+            document.getElementById("des"+i).innerHTML=descriptions[id] ;
             document.getElementById("car"+i).src = str.slice(0,str.length-5)+str2+'.jpg';
         }, 300);
     }
