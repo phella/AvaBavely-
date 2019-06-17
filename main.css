@@ -194,7 +194,7 @@ figure{
 }
 
 @media only screen and (max-width: 1100px) {
-    #car0 , #car2 {
+    #car0 , #car2 , #des0 , #des2 {
         display: none;
     }
   }
