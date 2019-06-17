@@ -43,6 +43,11 @@ function translate(i){
 }
 
 function carousal(x) {
+    document.getElementById("arr"+(x+1)).style.backgroundColor="#d3dcea";
+    document.getElementById("arr"+(x+1)).style.transition="0.4s";
+    setTimeout(()=>{
+        document.getElementById("arr"+(x+1)).style.backgroundColor="white";
+    },400);
     for(let i =0 ; i<3 ;i++){
         let str = document.getElementById("car"+i).src;
         let str2 = str;
