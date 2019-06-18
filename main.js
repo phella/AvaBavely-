@@ -1,6 +1,6 @@
 const carousalImgNo = 3;
 const descriptions = ['حفله &nbsp; 2','حفله &nbsp; 1','حفله &nbsp; 0'];
-const days = ['Sat' , 'Sun' , 'Mon' , 'Tues' , 'Wed' , 'Thu' , 'Fri'];
+const days = [ 'Sunday' , 'Monday' , 'Tuesday' , 'Wednesday' , 'Thusday' , 'Friday','Saturday'];
 let Modal = false;
 let scrollState;
 let maxScroll=0;
@@ -23,12 +23,24 @@ const createCalender = (function () {
     }
     document.getElementById("table").appendChild(el);
     // numbers in rows
-    for(let i = 0;i<5;i++) {
+    const date = new Date();
+    let day = date.getDay() - date.getDate()%7+1;
+    day = day>0 ? day:day+7;
+    let counter = 1;
+    console.log(day);
+    while(counter<31) {
       let tr = document.createElement("tr");
-      for(let i = 0 ;i<7;i++) {
+      for(let j = 0 ;j<7;j++) {
         let td = document.createElement("td");
-        td.innerHTML="philo";
+        let div = document.createElement("div");
+        div.className = "day";
+        if(day <= 0 && counter < 31){
+            div.innerHTML = counter;
+            counter++;
+        }
+        td.appendChild(div);
         tr.appendChild(td);
+        day--;
       }
       document.getElementById("table").appendChild(tr);  
     }

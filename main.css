@@ -228,5 +228,15 @@ figure{
   }
 
   td,th,table {
-      border:1px solid;
+      border-bottom:1px solid;
+  }
+
+  td , th {
+      height: 50px;
+  }
+
+  tr:nth-child(even) {background-color: #f2f2f2;}
+
+  .day {
+      color:#fc99f4;
   }
