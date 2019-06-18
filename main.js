@@ -4,7 +4,6 @@ const days = [ 'Sun' , 'Mon' , 'Tues' , 'Wednes' , 'Thurs' , 'Fri','Sat'];
 const reservedDays = {training:[1,3,10,20],show:[5,25]};
 let Modal = false;
 let scrollState;
-let maxScroll=0;
 
 document.onkeydown = function (event) {
     if(event.key === "Escape") {
@@ -63,9 +62,6 @@ function scrolling(){
     scrollState = window.scrollY;
     navColor();
     animate();
-    if(scrollState > maxScroll){
-        maxScroll = scrollState;
-    }
 }
 function navColor() {
         if(scrollState >= 10){
@@ -166,5 +162,5 @@ function closeModal(){
 
 function rotateTable(x){
     document.getElementById("3d").style.transitionDuration="3s";
-    document.getElementById("3d").style.transform=" rotateY("+x+"deg)";
+    document.getElementById("3d").style.transform="translateY(-150px) rotateY("+x+"deg)";
 }

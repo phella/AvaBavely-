@@ -248,6 +248,7 @@ figure{
 
   td , th {
       height: 50px;
+      backface-visibility: hidden;
   }
 
   tr:nth-child(even) {background-color: #f2f2f2;}
@@ -260,13 +261,14 @@ figure{
     width:100%;
     border-collapse: collapse;
     background-color: white;
+    backface-visibility: hidden;
 }
 
   #details {
       position :absolute;
       top:0px;
       width:100%;
-      height: 430px;
+      height: 280px;
       background-image: url("assets/back1.svg");
       backface-visibility: hidden;
       transform: rotateY(180deg);
