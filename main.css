@@ -103,6 +103,11 @@ figure{
     opacity: 0;
   }
 
+  .hide2 {
+      margin-top:210px;
+      opacity: 0;
+  } 
+
   @media only screen and (max-width: 1300px) {
     figure {
       width: 100%;

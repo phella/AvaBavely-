@@ -90,7 +90,7 @@ function animate() {
         translate(3);
         document.getElementById("nav-elements2").style.color="#007bff";
     } else if(scrollState>1900) {
-        translate(3);
+        translate(4);
         document.getElementById("nav-elements1").style.color="#007bff"; 
     }
 }
@@ -103,10 +103,14 @@ function translate(i){
         document.getElementById("arti"+i).style.transitionDuration = "2s";
         document.getElementById("arti"+i).style.transform = "translateY(-150px)";
         document.getElementById("arti"+i).style.opacity ="1";
-    } else {
+    } else if(i==3) {
         document.getElementById("carousal-section").style.transitionDuration = "3s";
         document.getElementById("carousal-section").style.transform = "translateY(-10px)";
         document.getElementById("carousal-section").style.opacity ="1";
+    } else {
+        document.getElementById("3d").style.transitionDuration = "3s";
+        document.getElementById("3d").style.transform = "translateY(-150px)";
+        document.getElementById("3d").style.opacity ="1";
     }
 }
 
