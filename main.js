@@ -29,18 +29,26 @@ function navColor() {
 function animate() {
     if(scrollState>320 && scrollState<950) {
         translate(1);
-    }else if (scrollState>950) {
+    }else if (scrollState>950 && scrollState <1470) {
         translate(2);
+    }else if(scrollState>1470){
+        translate(3);
     }
 }
 
 function translate(i){
-    document.getElementById("fig"+i).style.transitionDuration = "3s";
-    document.getElementById("fig"+i).style.transform = "translateY(-150px)";
-    document.getElementById("fig"+i).style.opacity ="1";
-    document.getElementById("arti"+i).style.transitionDuration = "2s";
-    document.getElementById("arti"+i).style.transform = "translateY(-150px)";
-    document.getElementById("arti"+i).style.opacity ="1";
+    if(i<3){
+        document.getElementById("fig"+i).style.transitionDuration = "3s";
+        document.getElementById("fig"+i).style.transform = "translateY(-150px)";
+        document.getElementById("fig"+i).style.opacity ="1";
+        document.getElementById("arti"+i).style.transitionDuration = "2s";
+        document.getElementById("arti"+i).style.transform = "translateY(-150px)";
+        document.getElementById("arti"+i).style.opacity ="1";
+    } else {
+        document.getElementById("carousal-section").style.transitionDuration = "3s";
+        document.getElementById("carousal-section").style.transform = "translateY(-10px)";
+        document.getElementById("carousal-section").style.opacity ="1";
+    }
 }
 
 // -1 means shift rigth and 1 means shift left
