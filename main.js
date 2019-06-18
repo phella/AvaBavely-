@@ -45,6 +45,7 @@ const createCalender = (function () {
             div.innerHTML = counter;
             counter++;
         }
+        td.style.transform="translateZ(200px)";
         td.appendChild(div);
         tr.appendChild(td);
         day--;
