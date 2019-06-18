@@ -80,7 +80,7 @@ function animate() {
     if(scrollState<320) {
         document.getElementById("nav-elements5").style.color="#007bff";
     }
-   else if(scrollState>320 && scrollState<950) {
+   else if(scrollState>280 && scrollState<950) {
         translate(1);
         document.getElementById("nav-elements4").style.color="#007bff";
     }else if (scrollState>950 && scrollState <1470) {
