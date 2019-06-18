@@ -1,3 +1,8 @@
 # AvaBavely-
-One page website using HTML5 , CSS , VanillaJS.
-The website is based on scrolling event.
+One page website using HTML5 , CSS3 (no frameworks) , VanillaJS (pure JS).
+
+-implemented Features
+* carousal
+* Modal
+* Animations
+* Embed google maps
