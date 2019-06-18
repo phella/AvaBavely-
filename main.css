@@ -221,3 +221,12 @@ figure{
   #modal-content {
       left:30%;
   }
+
+  table {
+      width:100%;
+      border-collapse: collapse;
+  }
+
+  td,th,table {
+      border:1px solid;
+  }

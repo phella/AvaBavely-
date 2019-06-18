@@ -1,8 +1,39 @@
 const carousalImgNo = 3;
 const descriptions = ['حفله &nbsp; 2','حفله &nbsp; 1','حفله &nbsp; 0'];
+const days = ['Sat' , 'Sun' , 'Mon' , 'Tues' , 'Wed' , 'Thu' , 'Fri'];
 let Modal = false;
 let scrollState;
 let maxScroll=0;
+
+document.onkeydown = function (event) {
+    if(event.key === "Escape") {
+        if(Modal){
+            closeModal();
+        }
+    }
+}
+
+const createCalender = (function () {
+    // days at header
+    let el = document.createElement("tr");
+    for(let i=0;i<7;i++){
+        let th = document.createElement("th");
+        th.innerHTML = days[i];
+        el.appendChild(th);
+    }
+    document.getElementById("table").appendChild(el);
+    // numbers in rows
+    for(let i = 0;i<5;i++) {
+      let tr = document.createElement("tr");
+      for(let i = 0 ;i<7;i++) {
+        let td = document.createElement("td");
+        td.innerHTML="philo";
+        tr.appendChild(td);
+      }
+      document.getElementById("table").appendChild(tr);  
+    }
+})();
+
 function scrolling(){
     scrollState = window.scrollY;
     console.log(scrollState);
@@ -15,12 +46,12 @@ function scrolling(){
 function navColor() {
         if(scrollState >= 10){
         document.getElementById("nav").style.backgroundColor = "white";
-        for(let i=1;i<6;i++){
+        for(let i=1;i<5;i++){
             document.getElementById("nav-elements"+i).style.color = "black";
         }
     } else {
         document.getElementById("nav").style.backgroundColor = "transparent";
-        for(let i=1;i<6;i++){
+        for(let i=1;i<5;i++){
             document.getElementById("nav-elements"+i).style.color = "white";
         }
     }
@@ -94,12 +125,4 @@ function closeModal(){
     document.getElementById("modal").style.display = "none";
     document.getElementById("modal-contant").remove();
     Modal = false;
-}
-
-document.onkeydown = function (event) {
-    if(event.key === "Escape") {
-        if(Modal){
-            closeModal();
-        }
-    }
 }
