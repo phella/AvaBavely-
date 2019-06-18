@@ -5,7 +5,7 @@ One page website using HTML5 , CSS3 (no frameworks) , VanillaJS (pure JS).
 * Modal
 * Responsive
 * Carousal
-* Calender
+* Calendar
 * loading page
 * Colapse navBar
 * 3d Animation
