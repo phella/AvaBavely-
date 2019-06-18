@@ -1,6 +1,6 @@
 const carousalImgNo = 3;
 const descriptions = ['حفله &nbsp; 2','حفله &nbsp; 1','حفله &nbsp; 0'];
-const days = [ 'Sunday' , 'Monday' , 'Tuesday' , 'Wednesday' , 'Thusday' , 'Friday','Saturday'];
+const days = [ 'Sun' , 'Mon' , 'Tues' , 'Wednes' , 'Thurs' , 'Fri','Sat'];
 const reservedDays = {training:[1,3,10,20],show:[5,25]};
 let Modal = false;
 let scrollState;
@@ -39,7 +39,7 @@ const createCalender = (function () {
                 td.innerHTML = "بروفه";
             } else if (reservedDays.show.indexOf(counter)!== -1 ) {
                 td.innerHTML = "عرض";
-                td.setAttribute('onclick','rotateTable()');
+                td.setAttribute('onclick','rotateTable(180)');
                 td.style.cursor = "pointer";
             }
             div.innerHTML = counter;
@@ -145,7 +145,7 @@ function closeModal(){
     Modal = false;
 }
 
-function rotateTable(){
+function rotateTable(x){
     document.getElementById("3d").style.transitionDuration="3s";
-    document.getElementById("3d").style.transform=" rotateY(180deg)";
+    document.getElementById("3d").style.transform=" rotateY("+x+"deg)";
 }
