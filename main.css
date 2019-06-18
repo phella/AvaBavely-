@@ -225,6 +225,8 @@ figure{
   table {
       width:100%;
       border-collapse: collapse;
+      backface-visibility: hidden;
+      background-color: white;
   }
 
   td,th,table {
@@ -239,4 +241,13 @@ figure{
 
   .day {
       color:#fc99f4;
+  }
+
+
+  #details {
+      position :absolute;
+      width:100%;
+      height: 360px;
+      background-color: aqua;
+      transform: rotateY(180deg);
   }

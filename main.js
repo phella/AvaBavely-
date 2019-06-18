@@ -39,6 +39,8 @@ const createCalender = (function () {
                 td.innerHTML = "بروفه";
             } else if (reservedDays.show.indexOf(counter)!== -1 ) {
                 td.innerHTML = "عرض";
+                td.setAttribute('onclick','rotateTable()');
+                td.style.cursor = "pointer";
             }
             div.innerHTML = counter;
             counter++;
@@ -141,4 +143,9 @@ function closeModal(){
     document.getElementById("modal").style.display = "none";
     document.getElementById("modal-contant").remove();
     Modal = false;
+}
+
+function rotateTable(){
+    document.getElementById("3d").style.transitionDuration="3s";
+    document.getElementById("3d").style.transform=" rotateY(180deg)";
 }
