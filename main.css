@@ -258,5 +258,6 @@ figure{
       backface-visibility: hidden;
       transform: rotateY(180deg);
       color:white;
+      perspective: 1000;
       -webkit-perspective: 1000;
   }
