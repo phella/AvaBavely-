@@ -95,6 +95,7 @@ function animate() {
     }
 }
 
+// needs code refactor
 function translate(i){
     if(i<3){
         document.getElementById("fig"+i).style.transitionDuration = "3s";
