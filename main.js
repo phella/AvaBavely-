@@ -86,10 +86,12 @@ function openModal(el) {
         parent.id = 'modal-contant';
         parent.append(cln);
         document.getElementById("modal").appendChild(parent);
+        Modal = true;
     }
 }
 
 function closeModal(){
     document.getElementById("modal").style.display = "none";
     document.getElementById("modal-contant").remove();
+    Modal = false;
 }
