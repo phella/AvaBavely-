@@ -95,3 +95,11 @@ function closeModal(){
     document.getElementById("modal-contant").remove();
     Modal = false;
 }
+
+document.onkeydown = function (event) {
+    if(event.key === "Escape") {
+        if(Modal){
+            closeModal();
+        }
+    }
+}
