@@ -271,3 +271,14 @@ figure{
       transform: rotateY(180deg);
       color:white;
   }
+
+  footer {
+      background-color: #007bff;
+  }
+
+  .icons {
+    max-height: 20px;
+    display: inline;
+    max-width: 20px;
+    cursor: pointer;
+  }
