@@ -14,6 +14,11 @@ document.onkeydown = function (event) {
     }
 }
 
+window.onload = function(){
+    document.getElementById("spinner").style.display = "none";
+    document.getElementsByTagName("body")[0].style.overflowY="auto";
+};
+
 const createCalender = (function () {
     // days at header
     let el = document.createElement("tr");
