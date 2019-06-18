@@ -205,6 +205,13 @@ figure{
     }
   }
 
+  @media only screen and (max-width: 640px) {
+    li {
+        display: block;
+        padding:5px;
+    }
+  }
+
   .carousal-par{
         position: absolute;
         bottom: 55px;
