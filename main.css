@@ -17,7 +17,7 @@ li a{
 nav {
     position: fixed;
     width:100%;
-    z-index:99;
+    z-index:8;
     border-bottom: 1px outset;
 }
 body {
@@ -203,4 +203,21 @@ figure{
         position: absolute;
         bottom: 55px;
         right: 35px;
+  }
+
+  .modal {
+      display: none;
+      position: fixed;
+      z-index: 9;
+      left:0;
+      top:0;
+      height: 100%;
+      width: 100%;
+      overflow:auto;
+      background-color: rgba(0,0,0,0.5);
+      text-align: center;
+  }
+
+  #modal-content {
+      left:30%;
   }

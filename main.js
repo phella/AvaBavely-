@@ -1,5 +1,6 @@
 const carousalImgNo = 3;
 const descriptions = ['حفله &nbsp; 2','حفله &nbsp; 1','حفله &nbsp; 0'];
+let Modal = false;
 let scrollState;
 let maxScroll=0;
 function scrolling(){
@@ -42,6 +43,7 @@ function translate(i){
     document.getElementById("arti"+i).style.opacity ="1";
 }
 
+// -1 means shift rigth and 1 means shift left
 function carousal(x) {
     document.getElementById("arr"+(x+1)).style.backgroundColor="#d3dcea";
     document.getElementById("arr"+(x+1)).style.transition="0.4s";
@@ -53,6 +55,7 @@ function carousal(x) {
         let str2 = str;
         const id =(+str2.slice(-5,-4) + x)%carousalImgNo;
         str2 = id>-1? id: carousalImgNo -1 ;
+        console.log(str2);
         document.getElementById("car"+i).style.opacity ="0";
         document.getElementById("des"+i).style.opacity="0" ;
         document.getElementById("car"+i).style.transitionDuration = "0.3s";
@@ -60,8 +63,25 @@ function carousal(x) {
         setTimeout(()=>{
             document.getElementById("car"+i).style.opacity ="1";
             document.getElementById("des"+i).style.opacity ="1";
-            document.getElementById("des"+i).innerHTML=descriptions[id] ;
+            document.getElementById("des"+i).innerHTML=descriptions[str2] ;
             document.getElementById("car"+i).src = str.slice(0,str.length-5)+str2+'.jpg';
         }, 300);
     }
+}
+
+function openModal(el) {
+    if(!Modal){
+        document.getElementById("modal").style.display = "block";
+        const cln = el.cloneNode(true);
+        var parent = document.createElement("div");
+        parent.style.display = "inline-block";
+        parent.id = 'modal-contant';
+        parent.append(cln);
+        document.getElementById("modal").appendChild(parent);
+    }
+}
+
+function closeModal(){
+    document.getElementById("modal").style.display = "none";
+    document.getElementById("modal-contant").remove();
 }
