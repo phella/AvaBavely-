@@ -12,6 +12,7 @@ One page website using HTML5 , CSS3 (no frameworks) , VanillaJS (pure JS).
 * footer
 * Embed google maps
 
+//
 - TO DO 
 * Code refactor
 * add SVG animations
