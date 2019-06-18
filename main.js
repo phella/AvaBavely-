@@ -1,6 +1,7 @@
 const carousalImgNo = 3;
 const descriptions = ['حفله &nbsp; 2','حفله &nbsp; 1','حفله &nbsp; 0'];
 const days = [ 'Sunday' , 'Monday' , 'Tuesday' , 'Wednesday' , 'Thusday' , 'Friday','Saturday'];
+const reservedDays = {training:[1,3,10,20],show:[5,25]};
 let Modal = false;
 let scrollState;
 let maxScroll=0;
@@ -27,7 +28,6 @@ const createCalender = (function () {
     let day = date.getDay() - date.getDate()%7+1;
     day = day>0 ? day:day+7;
     let counter = 1;
-    console.log(day);
     while(counter<31) {
       let tr = document.createElement("tr");
       for(let j = 0 ;j<7;j++) {
@@ -35,6 +35,11 @@ const createCalender = (function () {
         let div = document.createElement("div");
         div.className = "day";
         if(day <= 0 && counter < 31){
+            if(reservedDays.training.indexOf(counter) !== -1){
+                td.innerHTML = "بروفه";
+            } else if (reservedDays.show.indexOf(counter)!== -1 ) {
+                td.innerHTML = "عرض";
+            }
             div.innerHTML = counter;
             counter++;
         }
@@ -106,7 +111,6 @@ function carousal(x) {
         let str2 = str;
         const id =(+str2.slice(-5,-4) + x)%carousalImgNo;
         str2 = id>-1? id: carousalImgNo -1 ;
-        console.log(str2);
         document.getElementById("car"+i).style.opacity ="0";
         document.getElementById("des"+i).style.opacity="0" ;
         document.getElementById("car"+i).style.transitionDuration = "0.3s";
