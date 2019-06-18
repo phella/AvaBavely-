@@ -56,12 +56,11 @@ const createCalender = (function () {
 
 function scrolling(){
     scrollState = window.scrollY;
-    console.log(scrollState);
-        animate();
+    navColor();
+    animate();
     if(scrollState > maxScroll){
         maxScroll = scrollState;
     }
-    navColor();
 }
 function navColor() {
         if(scrollState >= 10){
@@ -78,12 +77,21 @@ function navColor() {
 }
 
 function animate() {
-    if(scrollState>320 && scrollState<950) {
+    if(scrollState<320) {
+        document.getElementById("nav-elements5").style.color="#007bff";
+    }
+   else if(scrollState>320 && scrollState<950) {
         translate(1);
+        document.getElementById("nav-elements4").style.color="#007bff";
     }else if (scrollState>950 && scrollState <1470) {
         translate(2);
-    }else if(scrollState>1470){
+        document.getElementById("nav-elements3").style.color="#007bff";
+    }else if(scrollState>1470 && scrollState<1900){
         translate(3);
+        document.getElementById("nav-elements2").style.color="#007bff";
+    } else if(scrollState>1900) {
+        translate(3);
+        document.getElementById("nav-elements1").style.color="#007bff"; 
     }
 }
 
