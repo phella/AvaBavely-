@@ -4,7 +4,6 @@ const days = [ 'Sun' , 'Mon' , 'Tues' , 'Wednes' , 'Thurs' , 'Fri','Sat'];
 const reservedDays = {training:[1,3,10,20],show:[5,25]};
 let Modal = false;
 let scrollState;
-
 document.onkeydown = function (event) {
     if(event.key === "Escape") {
         if(Modal){
@@ -12,6 +11,7 @@ document.onkeydown = function (event) {
         }
     }
 }
+
 
 window.onload = function(){
     document.getElementById("spinner").style.display = "none";
@@ -64,7 +64,8 @@ function scrolling(){
     animate();
 }
 function navColor() {
-        if(scrollState >= 10){
+        if(scrollState >= 10 || window.innerWidth < 1000){
+            console.log(window.innerWidth);
         document.getElementById("nav").style.backgroundColor = "white";
         for(let i=1;i<6;i++){
             document.getElementById("nav-elements"+i).style.color = "black";

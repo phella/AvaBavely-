@@ -213,8 +213,22 @@ figure{
 
   @media only screen and (max-width: 640px) {
     li {
-        display: block;
-        padding:5px;
+        display: none;
+    }
+    a {
+        margin:0px;
+    }
+    ul {
+        margin : 0px;
+    }
+    nav {
+        display:block;
+    }
+    #fb {
+        margin-left:0px;
+    }
+    #car1 {
+        width:auto !important;
     }
   }
 
